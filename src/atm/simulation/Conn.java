@@ -15,7 +15,7 @@ public class Conn {
 	public Conn() {
 		try {
 			Class.forName("com.mysql.jdbc.Driver");			// register JDBC driver in our program
-			c= DriverManager.getConnection("jdbc:mysql:///project","root","");
+			c= DriverManager.getConnection("jdbc:mysql:///projectDB1","root","");
 			s= c.createStatement();
 			
 		}catch (Exception e) {
