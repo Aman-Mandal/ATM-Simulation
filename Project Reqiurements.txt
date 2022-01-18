@@ -1,0 +1,30 @@
+ 
+ATM Simulation
+
+Simulation of ATM in which we can perform all the basic as well as some advance features of banking at our finger tips.
+
+User Requirements : 
+
+1. User Interface should be very well disciplined.
+2. All the modules should be proper without any bugs and glitches.
+3. All the banking stuffs like : 
+	> Cash Withdrawl 		: For withdrawing a specific amount
+	> Cash Deposit 		: For taking out cash
+	> Mini Statement  		: For getting the statement of your account .. like passbook
+	> Pin Change 		: Changing Pin
+	> Fast Cash 		: Taking out cash like 100, 200, 500, 1000, 5000 etc.
+	> Creating Bank Acc. 		: Signing UP and filling the details
+	> Logging in the Ac.		: Accessing ur account
+	etc.. should work properly !
+
+
+4. Database Requirements : 
+
+	> Signup1 Table : 	Which will store all the user data like Name, Address and all personal information
+	> Signup2 Table : 	Store all the details of bank account like account type , account no. , and all facilities you need like email banking, sms banking etc.
+	> Login Table : 	Store the Generated Card No. and Pin No.
+	> etc. if i need anything in future
+	
+I WROTE!
+
+	
