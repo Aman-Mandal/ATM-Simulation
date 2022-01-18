@@ -14,7 +14,7 @@ public class Login extends JFrame implements ActionListener{
     Login(){
         setTitle("AUTOMATED TELLER MACHINE");
         
-        ImageIcon i1 = new ImageIcon(ClassLoader.getSystemResource("ASimulatorSystem/icons/logo.jpg"));
+        ImageIcon i1 = new ImageIcon(ClassLoader.getSystemResource("atm/simulation/icons/logo.jpg"));
         Image i2 = i1.getImage().getScaledInstance(100, 100, Image.SCALE_DEFAULT);
         ImageIcon i3 = new ImageIcon(i2);
         JLabel l11 = new JLabel(i3);
