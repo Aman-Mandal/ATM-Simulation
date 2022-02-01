@@ -247,9 +247,7 @@ public class Signup2 extends JFrame implements ActionListener{
             
         }catch(Exception ex){
              ex.printStackTrace();
-        }
-    
-               
+        }       
     }
     
     
