@@ -25,7 +25,8 @@ public class Transactions  extends JFrame implements ActionListener{
         add(l2);
         
         l1 = new JLabel("Please Select your Transaction");
-        l1.setFont(new Font ("System",Font.BOLD,38));
+        l1.setForeground(Color.WHITE);
+        l1.setFont(new Font("System", Font.BOLD, 16));
         
         
         b1 = new JButton("DEPOSIT");
