@@ -1,8 +1,4 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package atm.simulation;
 
 import java.awt.*;
@@ -17,20 +13,16 @@ public class Transactions  extends JFrame implements ActionListener{
     
     JLabel l1;
     JButton b1,b2,b3,b4,b5,b6,b7;
+    String pin;
     
-    Transactions(){
-        
-        setFont (new Font("System", Font.BOLD, 22));
-        Font f = getFont();
-        FontMetrics fm = getFontMetrics(f);
-        int x = fm.stringWidth("TRANSACTION");
-        int y = fm.stringWidth(" ");
-        int z = getWidth() - (3 * x);
-        int w = z/y;
-        String pad = "";
-        pad = String.format("%"+w+"s", pad);
-        setTitle( pad + "TRANSACTION");
-        
+    Transactions(String pin){
+        this.pin = pin;
+        ImageIcon i1 = new ImageIcon(ClassLoader.getSystemResource("atm/simulation/icons/logo.jpg"));
+        Image i2 = i1.getImage().getScaledInstance(1000, 1800, Image.SCALE_DEFAULT);
+        ImageIcon i3 = new ImageIcon(i2);
+        JLabel l2 = new JLabel(i3);
+        l2.setBounds(0,0,960,1080);
+        add(l2);
         
         l1 = new JLabel("Please Select your Transaction");
         l1.setFont(new Font ("System",Font.BOLD,38));
