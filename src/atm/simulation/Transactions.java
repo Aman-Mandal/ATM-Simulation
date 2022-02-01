@@ -79,73 +79,30 @@ public class Transactions  extends JFrame implements ActionListener{
        
     }
     
-    
     public void actionPerformed(ActionEvent ae){
-        
-        if(ae.getSource() == b1){
-            
-            new Deposit().setVisible(true);
+        if(ae.getSource()==b1){ 
             setVisible(false);
-        }
-        
-        else if(ae.getSource() == b2){
-            
-            new Withdrawl().setVisible(true);
+            new Deposit(pin).setVisible(true);
+        }else if(ae.getSource()==b2){ 
             setVisible(false);
-        }
-        
-        else if(ae.getSource() == b3){
-            
-            new FastCash().setVisible(true);
+            new Withdrawl(pin).setVisible(true);
+        }else if(ae.getSource()==b3){ 
             setVisible(false);
-        }
-        
-        else if(ae.getSource() == b4){
-            
-            new Login().setVisible(true);
+            new FastCash(pin).setVisible(true);
+        }else if(ae.getSource()==b4){ 
+            new MiniStatement(pin).setVisible(true);
+        }else if(ae.getSource()==b5){ 
             setVisible(false);
-        }
-        
-        else if(ae.getSource() == b5){
-            
-            new Pin().setVisible(true);
-            setVisible(false);
-        }
-        
-        else if(ae.getSource() == b6){
-            
-            String pinn = JOptionPane.showInputDialog("Enter PIN");
-            Conn c1 = new Conn();
-            
-            try{
-                
-                ResultSet rs = c1.s.executeQuery(" SELECT balance FROM BANK ORDER BY Pin = '"+pinn+"' Desc LIMIT 1");
-                
-                if(rs.next()){
-                    
-                    String balance = rs.getString("balance");
-                    
-                    JOptionPane.showMessageDialog(null, "Your Account Balance is " + balance);
-                    
-                }
-                
-                
-            }catch (Exception e ){
-                
-                e.printStackTrace();
-                
-            }
-            
-           
-        }else if(ae.getSource()== b7){
-        
+            new Pin(pin).setVisible(true);
+        }else if(ae.getSource()==b6){ 
+            this.setVisible(false);
+            new BalanceEnquiry(pin).setVisible(true);
+        }else if(ae.getSource()==b7){ 
             System.exit(0);
-            
         }
     }
     
     public static void main(String[] args){
-        new Transactions().setVisible(true);
+        new Transactions("").setVisible(true);
     }
-  
 }
